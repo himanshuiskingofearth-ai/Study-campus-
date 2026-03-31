@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Campus Prayagraj</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+html{scroll-behavior:smooth;}
+
+/* BODY WITH LOGO WATERMARK */
+body{
+background:linear-gradient(135deg,#0f2b3d,#1e3a8a);
+position:relative;
+}
+
+/* WATERMARK LOGO */
+body::before{
+content:"";
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:500px;
+height:500px;
+background:url('logo.png') no-repeat center/contain;
+opacity:0.05;
+z-index:-1;
+}
+
+/* NAV */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:white;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+width:50px;
+height:50px;
+border-radius:50%;
+}
+
+.logo span{
+font-weight:700;
+font-size:20px;
+color:#0f2b3d;
+}
+
+nav a{
+margin:0 10px;
+text-decoration:none;
+color:#1e293b;
+font-weight:500;
+}
+
+/* HERO */
+.hero{
+padding:100px 20px;
+text-align:center;
+color:white;
+}
+.hero h1{font-size:40px;}
+.hero p{margin:15px 0;}
+
+.btn{
+padding:12px 28px;
+border-radius:30px;
+border:none;
+cursor:pointer;
+background:#2563eb;
+color:white;
+}
+
+/* STRIP */
+.strip{
+background:#2563eb;
+color:white;
+padding:20px;
+display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
+}
+
+/* SECTION */
+.section{
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.white{
+background:white;
+border-radius:20px;
+padding:40px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+margin-top:40px;
+}
+
+h2{text-align:center;margin-bottom:20px;color:#0f2b3d;}
+.center{text-align:center;color:#64748b;margin-bottom:20px;}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+/* CARD */
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+cursor:pointer;
+}
+
+/* PLACEHOLDER */
+.placeholder{
+height:140px;
+background:#cbd5e1;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+/* FORM */
+input,select,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+/* FOOTER */
+footer{
+background:#0f172a;
+color:white;
+padding:50px 20px;
+margin-top:40px;
+}
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+/* FLOAT */
+.float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:25px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/919876543210" class="float">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- NAV -->
+<nav>
+<div class="logo">
+<img src="logo.png">
+<span>Study Campus</span>
+</div>
+
+<div>
+<a href="#courses">Courses</a>
+<a href="#results">Results</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Study Campus Prayagraj</h1>
+<p>Trusted Coaching for Class 1–12 Students</p>
+<button class="btn apply-btn">Apply Now</button>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+<div>✔ 12+ Years Experience</div>
+<div>✔ 5000+ Students</div>
+<div>✔ 98% Results</div>
+</div>
+
+<!-- COURSES -->
+<section id="courses" class="section white">
+<h2>Our Courses</h2>
+
+<div class="grid">
+<div class="card"><div class="placeholder"></div><h3>Class 1–5</h3></div>
+<div class="card"><div class="placeholder"></div><h3>Class 6–8</h3></div>
+<div class="card"><div class="placeholder"></div><h3>Class 9–10</h3></div>
+<div class="card"><div class="placeholder"></div><h3>Class 11–12</h3></div>
+</div>
+</section>
+
+<!-- RESULTS -->
+<section id="results" class="section">
+<div class="white">
+<h2>Top Results</h2>
+
+<div class="grid">
+<div class="card"><div class="placeholder"></div><h3>Topper 1</h3><p>96%</p></div>
+<div class="card"><div class="placeholder"></div><h3>Topper 2</h3><p>94%</p></div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+<div class="white">
+<h2>Admission Form</h2>
+
+<form id="form">
+<input type="text" id="name" placeholder="Student Name" required>
+<input type="tel" id="phone" placeholder="Mobile Number" required>
+
+<select>
+<option>Select Class</option>
+<option>1-5</option>
+<option>6-8</option>
+<option>9-10</option>
+<option>11-12</option>
+</select>
+
+<textarea placeholder="Message"></textarea>
+
+<button class="btn">Submit</button>
+</form>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-grid">
+<div>
+<h3>Study Campus</h3>
+<p>Prayagraj’s trusted coaching institute.</p>
+</div>
+
+<div>
+<h4>Contact</h4>
+<p>+91 98765 43210</p>
+</div>
+</div>
+</footer>
+
+<script>
+
+// APPLY BUTTON
+document.querySelector(".apply-btn").onclick=()=>{
+document.querySelector("#contact").scrollIntoView({behavior:"smooth"});
+};
+
+// FORM → WHATSAPP
+document.getElementById("form").addEventListener("submit",function(e){
+e.preventDefault();
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+
+let msg=`Name:${name} Phone:${phone}`;
+window.open(`https://wa.me/919876543210?text=${encodeURIComponent(msg)}`);
+});
+
+</script>
+
+</body>
+</html>
